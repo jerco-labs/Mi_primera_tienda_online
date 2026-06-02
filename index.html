@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jercorp | Moda y Accesorios</title>
+  <title>Jerco Store | Moda y Accesorios</title>
   <style>
     :root {
       --bg: #fff7f2;
@@ -66,19 +66,33 @@
       gap: 14px;
     }
 
-    .logo-wrap {
-      width: 62px;
-      height: 62px;
-      border-radius: 22px;
-      background:
-        linear-gradient(145deg, rgba(31, 22, 48, 0.98), rgba(199, 79, 107, 0.98));
-      box-shadow: var(--shadow);
-      display: grid;
-      place-items: center;
-      position: relative;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.18);
-    }
+.logo-wrap {
+  width: 62px;
+  height: 62px;
+  border-radius: 22px;
+  background:
+    linear-gradient(rgba(199, 79, 107, 0.98), white) padding-box,
+    linear-gradient(145deg, rgba(31, 22, 48, 0.98), rgba(199, 79, 107, 0.98)) border-box;
+
+  border: 3px solid transparent;
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.18);
+  top: -5px;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.logo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
 
     .logo-wrap::after {
       content: "";
@@ -624,8 +638,11 @@
   <header>
     <div class="container nav">
       <div class="brand">
-        <div class="logo-wrap" aria-label="Logo ChurriStore">
-          <div class="logo-letter">Æ</div>
+        <div class="logo-wrap" aria-label="Logo Jerco Store">
+          <div class="logo-wrap">
+          <img src="Imagenes_página_HTML/Logo_imagen1.png" alt="Jerco Store logo">
+          </div>
+
         </div>
         <div>
           <h1>Jerco Store</h1>
@@ -675,7 +692,7 @@
           <div class="showcase">
             <div class="showcase-top">
               <div class="mini-badge">Colección 2026</div>
-              <div class="mini-badge">J Premium Mark</div>
+              <div class="mini-badge">Ofertas para ti</div>
             </div>
             <div>
               <h3>Diseño editorial, juvenil y moderno.</h3>
@@ -691,9 +708,9 @@
             </div>
           </div>
           <div class="info-card">
-            <h3>Logo / marca personal</h3>
+            <h3>Marca personal</h3>
             <p>
-              ChurriStore incluye un monograma con inicial Æ para darle una firma visual única a tu tienda.
+              Jerco Store incluye un monograma con inicial J para darle una firma visual única a tu tienda.
             </p>
           </div>
         </div>
@@ -709,8 +726,8 @@
 
         <div class="featured-strip" style="display:grid; grid-template-columns:repeat(3, 1fr); gap:16px;">
           <div class="info-card">
-            <h3>Street chic</h3>
-            <p>Prendas versátiles con una vibra elegante y actual para el día a día.</p>
+            <h3>Ropa juvenil</h3>
+            <p>Prendas versátiles con una vibra urbana y actual para el día a día.</p>
           </div>
           <div class="info-card">
             <h3>Accesorios clave</h3>
@@ -803,7 +820,7 @@
           <div class="about-box">
             <h4>Nombre elegido</h4>
             <p>
-              <strong>Churri Store</strong> suena moderno, memorable y funciona bien para ropa y accesorios.
+              <strong>Jerco Store</strong> suena moderno, memorable y funciona bien para ropa y accesorios.
               Tiene un toque boutique que ayuda a que la marca se perciba más profesional.
             </p>
           </div>
@@ -820,11 +837,11 @@
           <div class="mark">
             <div class="mark-badge">J</div>
             <div class="mark-text">
-              <strong>Churri Store</strong>
+              <strong>Jerco Store</strong>
               <span>Monograma personal para tienda y etiquetas</span>
             </div>
           </div>
-          <div style="color:var(--muted); font-weight:600;">J • Churri Store</div>
+          <div style="color:var(--muted); font-weight:600;">• Jerco Store</div>
         </div>
       </div>
     </section>
