@@ -253,65 +253,108 @@
       gap: 18px;
     }
 
-    .showcase {
-      background: linear-gradient(145deg, rgba(31, 22, 48, 0.96), rgba(199, 79, 107, 0.94));
-      color: white;
-      border-radius: 34px;
-      padding: 26px;
-      box-shadow: var(--shadow);
-      min-height: 340px;
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
+.showcase {
+  background: #b45572;
+  border-radius: 34px;
+  min-height: 560px;
+  position: relative;
+  overflow: hidden;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: var(--shadow);
+}
 
-    .showcase::before {
-      content: "";
-      position: absolute;
-      inset: 18px;
-      border-radius: 28px;
-      border: 1px solid rgba(255,255,255,0.16);
-      pointer-events: none;
-    }
+/* FOTO DE FONDO */
+.showcase-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  z-index: 0;
+}
 
-    .showcase-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      position: relative;
-      z-index: 1;
-    }
+/* DEGRADADO VINO */
+.showcase::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
 
-    .mini-badge {
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.14);
-      border: 1px solid rgba(255,255,255,0.18);
-      font-size: 0.88rem;
-      font-weight: 700;
-    }
+  background: linear-gradient(
+    to top,
+    rgba(180,85,114,1) 0%,
+    rgba(180,85,114,.95) 20%,
+    rgba(180,85,114,.65) 40%,
+    rgba(180,85,114,.15) 60%,
+    rgba(180,85,114,0) 75%
+  );
+}
 
-    .showcase h3 {
-      position: relative;
-      z-index: 1;
-      margin: 0;
-      font-size: 2rem;
-      line-height: 1;
-      max-width: 11ch;
-      letter-spacing: -0.05em;
-    }
+/* MARCO INTERIOR */
+.showcase::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,.18);
+  z-index: 3;
+  pointer-events: none;
+}
 
-    .showcase p {
-      position: relative;
-      z-index: 1;
-      color: rgba(255,255,255,0.82);
-      line-height: 1.75;
-      margin: 0;
-      max-width: 32ch;
-    }
+/* CONTENIDO ENCIMA DE LA FOTO */
+.showcase-top,
+.showcase h3,
+.showcase p,
+.accent-row {
+  position: relative;
+  z-index: 2;
+}
+
+/* ETIQUETAS */
+.showcase-top {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  right: 24px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  z-index: 2;
+}
+
+.mini-badge {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.18);
+  border: 1px solid rgba(255,255,255,.25);
+  color: #fff;
+  font-size: .8rem;
+  font-weight: 700;
+}
+
+/* TÍTULO */
+.showcase h3 {
+  margin-top: 120px;
+  color: #fff;
+  font-size: 2.1rem;
+  line-height: .92;
+  max-width: 8ch;
+  letter-spacing: -0.05em;
+}
+
+/* DESCRIPCIÓN */
+.showcase p {
+  margin-top: 10px;
+  color: rgba(255,255,255,.92);
+  line-height: 1.7;
+  max-width: 30ch;
+}
 
     .accent-row {
       display: flex;
@@ -690,7 +733,7 @@
 
         <div class="hero-aside">
           <div class="showcase">
-            <img class="showcase-bg" src="Imagenes_página_HTMTL/Portada2.jpg" alt="Fondo de la colección">
+            <img class="showcase-bg" src="Imagenes_página_HTML/Portada2.jpg" alt="Fondo de la colección">
             <div class="showcase-top">
               <div class="mini-badge">Colección 2026</div>
               <div class="mini-badge">Ofertas para ti</div>
